@@ -1,0 +1,1 @@
+CREATE TABLE "main"."UserTopics" ("user_id" uuid NOT NULL, "topic_id" uuid NOT NULL, PRIMARY KEY ("user_id","topic_id") , FOREIGN KEY ("user_id") REFERENCES "main"."Users"("id") ON UPDATE no action ON DELETE cascade, FOREIGN KEY ("topic_id") REFERENCES "main"."Topics"("id") ON UPDATE no action ON DELETE cascade);

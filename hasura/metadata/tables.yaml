@@ -1,0 +1,58 @@
+- table:
+    schema: main
+    name: Cohorts
+- table:
+    schema: main
+    name: Startups
+  select_permissions:
+    - role: unauth
+      permission:
+        columns:
+          - id
+          - name
+        filter: {}
+  update_permissions:
+    - role: unauth
+      permission:
+        columns:
+          - name
+          - funding_raised
+          - size
+          - id
+        filter: {}
+        check: null
+- table:
+    schema: main
+    name: Topics
+  select_permissions:
+    - role: unauth
+      permission:
+        columns:
+          - id
+          - name
+        filter: {}
+- table:
+    schema: main
+    name: UserTopics
+- table:
+    schema: main
+    name: Users
+  select_permissions:
+    - role: unauth
+      permission:
+        columns:
+          - email
+          - expertise
+          - id
+          - linkedin_url
+          - name
+        filter: {}
+  update_permissions:
+    - role: unauth
+      permission:
+        columns:
+          - expertise
+          - linkedin_url
+          - startup_id
+        filter: {}
+        check: null
