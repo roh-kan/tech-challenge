@@ -1,0 +1,80 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 90vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 2rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+
+th.tableMainColumn{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+.form{
+  margin-top: 1em;
+  min-width: 300px;
+}
+
+.field{
+  text-align: center;
+  margin-top: 2em;
+}

@@ -1,16 +1,18 @@
 import "../styles/globals.css";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { ApolloProvider } from "@apollo/client";
+import { useApollo } from "../lib/apolloClient";
+import { UserProvider } from "../lib/userProvider";
 
 function MyApp({ Component, pageProps }) {
-  const client = new ApolloClient({
-    uri: "http://localhost:4000/v1/graphql",
-    cache: new InMemoryCache(),
-  });
+  const client = useApollo(pageProps);
+  const getLayout = Component.getLayout || ((page) => page);
 
   return (
-    <ApolloProvider client={client}>
-      <Component {...pageProps} />
-    </ApolloProvider>
+    <UserProvider>
+      <ApolloProvider client={client}>
+        {getLayout(<Component {...pageProps} />)}
+      </ApolloProvider>
+    </UserProvider>
   );
 }
 
