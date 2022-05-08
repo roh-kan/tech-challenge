@@ -1,0 +1,1 @@
+CREATE TABLE "main"."Startups" ("id" uuid NOT NULL, "name" varchar NOT NULL, "size" integer NOT NULL, "funding_raised" double precision NOT NULL, PRIMARY KEY ("id") , UNIQUE ("id"));COMMENT ON TABLE "main"."Startups" IS E'To save details about the startup';

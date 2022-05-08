@@ -1,0 +1,13 @@
+Assumptions
+------------------------
+- User is authenticated by his email alone as this task doesn't require an auth provider. Downside is that anyone with user's email can fill the onboarding details.
+- If a user is assinged to a startup, then he is considered to be part of program type: Startup. In order to achieve this, users under program type: Startup are assigned to startups as part of seed data.
+- This project only supports local environment. No environment file is added. 
+- Users, Topics (List of Topics and Industries of Interest), Cohorts, Startups data is added as part of migration as seed data.
+- All the transactions are done by `unauth` user
+
+
+Not implemented
+------------------------
+- The user can select co-founders (if they have any) of a startup program from the same cohort that do not yet have a startup company assigned.
+ 

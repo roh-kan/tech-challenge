@@ -1,0 +1,24 @@
+-- Could not auto-generate a down migration.
+-- Please write an appropriate down migration for the SQL below:
+-- INSERT INTO main."Topics" (name, id) VALUES
+-- ('Adtech',1),
+-- ('Aerospace',2),
+-- ('Agriculture',3),
+-- ('Analytics',4),
+-- ('ArtTech',5),
+-- ('B2B SaaS',6),
+-- ('Biotech/Longevity',7),
+-- ('ClimateTech',8),
+-- ('Community',9),
+-- ('Construction',10),
+-- ('Consumer Tech',11),
+-- ('Creator Economy',12),
+-- ('Crypto, DeFi & Blockchain',13),
+-- ('Data/Infrastructure',14),
+-- ('Developer Tools',15),
+-- ('Drug Discovery',16),
+-- ('Education',17),
+-- ('Energy/CleanTech',18),
+-- ('Entertainment',19),
+-- ('Financial Services/FinTech',20);
+TRUNCATE main."Topics";
