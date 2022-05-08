@@ -4,12 +4,32 @@
 - table:
     schema: main
     name: Startups
+  array_relationships:
+    - name: Users
+      using:
+        foreign_key_constraint_on:
+          column: startup_id
+          table:
+            schema: main
+            name: Users
+  insert_permissions:
+    - role: unauth
+      permission:
+        check: {}
+        columns:
+          - name
+          - funding_raised
+          - size
+          - id
+        backend_only: false
   select_permissions:
     - role: unauth
       permission:
         columns:
+          - funding_raised
           - id
           - name
+          - size
         filter: {}
   update_permissions:
     - role: unauth
@@ -34,6 +54,21 @@
 - table:
     schema: main
     name: UserTopics
+  insert_permissions:
+    - role: unauth
+      permission:
+        check: {}
+        columns:
+          - topic_id
+          - user_id
+        backend_only: false
+  select_permissions:
+    - role: unauth
+      permission:
+        columns:
+          - topic_id
+          - user_id
+        filter: {}
 - table:
     schema: main
     name: Users
@@ -46,6 +81,7 @@
           - id
           - linkedin_url
           - name
+          - startup_id
         filter: {}
   update_permissions:
     - role: unauth
